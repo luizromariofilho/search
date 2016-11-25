@@ -1,0 +1,10 @@
+#Gemfile
+gem 'searchkick'
+#https://github.com/ankane/searchkick
+
+#model
+searchkick
+
+#controller
+# Diz ao elastickick para pesquisar as keyrwords nos campos name e description
+@series = Series.search params[:keywords], fields: [:name, :description]
