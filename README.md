@@ -7,7 +7,15 @@ Things you may want to cover:
 
 * Ruby version
 
+2.3.3
+
 * System dependencies
+
+Gemfile
+
+gem 'searchkick'
+
+https://github.com/ankane/searchkick
 
 * Configuration
 
@@ -19,6 +27,14 @@ Things you may want to cover:
 
 * Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+Model
 
-* ...
+searchkick
+
+Controller
+
+Diz ao elastickick para pesquisar as keyrwords nos campos name e description
+
+@series = Series.search params[:keywords], fields: [:name, :description]
+
+* Deployment instructions
